@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    <title>Text Encrypter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">E<span class="hidden">ncriptador</span></h2>
+    </header>
+    <main>
+ <div class="main-container">
+  <label for="submit-text">
+    <textarea
+      name="submit-text"
+      id="submit-text"
+      title="submit-text"
+      placeholder="Ingresa el texto aqui"
+    ></textarea>
+  </label>
+  <div class="warning">
+    <img
+      src="./assets/img/warning-circle-svgrepo-com.svg"
+      alt="warning icon"
+      class="warning-icon"
+    />
+    <span class="warning-text"
+      >Solo letras en minúscula y sin acentuación.</span
+    >
+  </div>
+  <div class="buttons">
+    <button type="button" id="encrypt">Encriptar</button>
+    <button type="button" id="decrypt">Desencriptar</button>
+    <button type="button" id="clear">Limpiar</button>
+  </div>
+ </div>
+<div class="second-container">
+  <label for="convert-text">
+    <textarea
+      name="convert-text"
+      id="convert-text"
+      title="convert-text"
+      wrap="soft"
+    ></textarea>
+    <div class="message">
+      <h2 id="message-title"></h2>
+      <p></p>
+    </div>
+  </label>
+  <div class="buttons">
+    <button type="button" id="copy">Copiar</button>
+  </div>
+</div>
+    </main>
+    <footer>
+      <p>By: Andres</p>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
