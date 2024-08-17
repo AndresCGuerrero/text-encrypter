@@ -45,6 +45,10 @@ label {
   width: 100%;
 }
 
+textarea {
+  resize: none;
+}
+
 #submit-text {
   width: 92%;
   height: 45vh;
