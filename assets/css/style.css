@@ -246,77 +246,14 @@ footer {
     /* color: var(--font-color); */
   }
 
-  .warning {
-    display: flex;
-    margin-left: 2rem;
-    align-items: center;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem;
-  }
-
-  button[type="button"] {
-    width: 80%;
-    height: 3.5rem;
-    font-family: var(--logo-font);
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    border: none;
-    border-radius: 0.5rem;
-    box-shadow: 3px 3px 2px var(--shadow-color);
-    cursor: pointer;
-  }
-
-  button[type="button"]:hover {
-    transform: translateY(0.2rem);
-  }
-
-  #encrypt {
-    color: var(--contrast-color);
-    background-color: var(--second-color);
-  }
-
-  #decrypt {
-    color: var(--contrast-color);
-    background-color: var(--third-color);
-  }
-
-  #clear {
-    color: var(--contrast-color);
-    background-color: var(--font-color);
-  }
-
   #convert-text {
-    width: 92%;
     min-height: 60vh;
-    border: none;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    margin-bottom: -10rem;
-    font-size: clamp(1rem, 4vw, 1.3rem);
-    text-align: center;
-    padding: 2rem 1rem;
-    font-weight: 600;
   }
 
   .message {
     /* background-color: red; */
     top: -13rem;
-    position: relative;
-    width: fit-content;
     min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    border-radius: 0.5rem;
-    margin: 0 auto;
-    text-align: center;
   }
 
   .message h2 {
@@ -334,9 +271,6 @@ footer {
   }
 
   footer {
-    display: flex;
-    justify-content: center;
-    color: var(--contrast-color);
-    background-color: var(--second-color);
+    line-height: 2;
   }
 }
