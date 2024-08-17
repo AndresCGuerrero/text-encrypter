@@ -31,7 +31,7 @@ function verifyData() {
   if (!textRegExp.test(textEntry)) {
     message.textContent =
       "El texto debe contener solo letras minusculas, sin acentos ni caracteres especiales.";
-    // message2.classList.add("hidden")
+    message2.classList.add("hidden");
     return false;
   }
 
@@ -93,26 +93,19 @@ function showData(event) {
   }
 }
 
-function buttons() {
-  let encrypt = d.getElementById("encrypt");
-  let decrypt = d.getElementById("decrypt");
-
-  encrypt.addEventListener("click", showData);
-  decrypt.addEventListener("click", showData);
-}
-
-//copy
-
 function copyText() {
   let textCopied = textOutput.value;
-  navigator.clipboard.writeText(textCopied);
-  message2.innerText = "";
-  message2.innerText = "Texto copiado.";
-}
-
-function copyButton() {
-  let copy = d.getElementById("copy");
-  copy.addEventListener("click", copyText);
+  console.log(textCopied);
+  if (textCopied) {
+    navigator.clipboard.writeText(textCopied);
+    console.log(textCopied);
+    message2.innerText = "Texto copiado.";
+    message.classList.add("hidden");
+    messageContainer.classList.remove("hidden");
+    textOutput.innerText = "";
+  } else {
+    alert("No se encontró texto para copiar.");
+  }
 }
 
 // reset interface
@@ -120,14 +113,22 @@ function copyButton() {
 function resetInterface() {
   d.getElementById("submit-text").value = "";
   textOutput.innerText = "";
+  messageContainer.classList.remove("hidden");
+  message.classList.remove("hidden");
+  message2.classList.remove("hidden");
   initialMessage();
 }
 
-function clearButton() {
+function buttons() {
+  let encrypt = d.getElementById("encrypt");
+  let decrypt = d.getElementById("decrypt");
   let clear = d.getElementById("clear");
+  let copy = d.getElementById("copy");
+
+  encrypt.addEventListener("click", showData);
+  decrypt.addEventListener("click", showData);
   clear.addEventListener("click", resetInterface);
+  copy.addEventListener("click", copyText);
 }
 
 d.addEventListener("DOMContentLoaded", buttons);
-d.addEventListener("DOMContentLoaded", clearButton);
-d.addEventListener("DOMContentLoaded", copyButton);
